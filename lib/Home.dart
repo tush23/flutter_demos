@@ -19,9 +19,9 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        chigitldren: [
           FlatButton(
-            
+          
               color: Colors.blue,
               onPressed: () => goto(context, MainWorker()),
               child: Text('Google Progress Indicator'))
