@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Home.dart';
 import 'google_progress/main_worker.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainWorker(),
+      home: HomePage(),
     );
   }
 }
