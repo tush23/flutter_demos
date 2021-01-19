@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
-        chigitldren: [
+        children: [
           FlatButton(
           
               color: Colors.blue,
