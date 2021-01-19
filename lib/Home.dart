@@ -4,7 +4,6 @@ import 'package:flutter_demos/google_progress/main_worker.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
