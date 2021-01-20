@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demos/bottom_sheet/bottom_sheet_by_shivam.dart';
 import 'package:flutter_demos/customs/customs.dart';
 import 'package:flutter_demos/google_progress/main_worker.dart';
-import 'date_extension/date_extension.dart';
+import 'date_extension/date_extension_by_shivam'.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -25,7 +25,8 @@ class _HomePageState extends State<HomePage> {
               color: Colors.blue,
               onPressed: () => goto(context, MainWorker()),
               child: Text('Google Progress Indicator')),
-          Text(DateTime.parse('1990-06-20 08:03').beautify()),
+          Text(
+              'Extension method->${DateTime.parse('1990-06-20 08:03').beautify()}'),
           FlatButton(
               color: Colors.blue,
               onPressed: () {
