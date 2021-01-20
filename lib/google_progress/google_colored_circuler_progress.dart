@@ -172,22 +172,28 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // print('ProgressVALUE-$_pathCount');
     progressVal = headValue * 100.toInt();
-    print('ProgressCOUNT-$progressVal');
+    // print('ProgressCOUNTUUUUU    $progressVal');
+
+    var data = progressVal - 50;
+    print('ProgressFinal    $data');
+    print(_sweep);
+
 
     final Paint paint = Paint()
-      ..color = colored
-          ? ((progressVal > 0.0 && progressVal < 20.0)
-              ? Colors.red
-              : (progressVal > 20.0 && progressVal < 40.0)
-                  ? Colors.yellow
-                  : (progressVal > 40.0 && progressVal < 60.0)
-                      ? Colors.green
-                      : (progressVal > 60.0 && progressVal < 80.0)
-                          ? Colors.teal
-                          : (progressVal > 80.0 && progressVal < 100.0)
-                              ? Colors.blueAccent
-                              : Colors.lightBlueAccent)
-          : valueColor
+      ..color = randomColorsList[progressVal - 50 > 10 ? 1 : 0]
+      // colored
+      //     ? ((progressVal > 0.0 && progressVal < 20.0)
+      //         ? Colors.red
+      //         : (progressVal > 20.0 && progressVal < 40.0)
+      //             ? Colors.yellow
+      //             : (progressVal > 40.0 && progressVal < 60.0)
+      //                 ? Colors.green
+      //                 : (progressVal > 60.0 && progressVal < 80.0)
+      //                     ? Colors.teal
+      //                     : (progressVal > 80.0 && progressVal < 100.0)
+      //                         ? Colors.blueAccent
+      //                         : Colors.lightBlueAccent)
+      //     : valueColor
       ..strokeWidth = strokeWidth
       ..style = PaintingStyle.stroke;
     if (backgroundColor != null) {
@@ -195,7 +201,7 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
         ..color = backgroundColor
         ..strokeWidth = strokeWidth
         ..style = PaintingStyle.stroke;
-      canvas.drawArc(Offset.zero & size, 0, _sweep, false, backgroundPaint);
+      canvas.drawArc(Offset.zero & size, 0, _sweep, false, paint);
     }
 
     if (value == null) // Indeterminate
@@ -346,7 +352,7 @@ class _CustomCircularProgressIndicatorState
             backgroundColor: widget.backgroundColor,
             valueColor: widget._getValueColor(context),
             value: widget.value,
-            colored: widget.isColored,// may be null
+            colored: widget.isColored, // may be null
             headValue:
                 headValue, // remaining arguments are ignored if widget.value is not null
             tailValue: tailValue,
