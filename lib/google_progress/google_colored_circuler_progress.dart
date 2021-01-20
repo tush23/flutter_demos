@@ -154,33 +154,35 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
   static const double _twoPi = math.pi * 2.0;
   static const double _epsilon = .001;
   // Canvas.drawArc(r, 0, 2*PI) doesn't draw anything, so just get close.
-  static const double _sweep = _twoPi - _epsilon;
+   static double _sweep = _twoPi - _epsilon;
   static const double _startAngle = -math.pi / 2.0;
 
   static const Color randomColors = Colors.black;
   var _random = Random();
   static const List<Color> randomColorsList = [
-    Colors.black,
+    Colors.transparent,
     Colors.pink,
     Colors.green,
     Colors.red,
-    Colors.yellow
+    Colors.yellow,
+    Colors.blue,
+    Colors.grey,
+    Colors.orange
   ];
   static const int _pathCount = _kIndeterminateCircularDuration ~/ 1333;
 
   @override
   void paint(Canvas canvas, Size size) {
     // print('ProgressVALUE-$_pathCount');
-    progressVal = headValue * 100.toInt();
+    progressVal = headValue * randomColorsList.length.toInt();
     // print('ProgressCOUNTUUUUU    $progressVal');
 
-    var data = progressVal - 50;
-    print('ProgressFinal    $data');
-    print(_sweep);
+    int index = progressVal.toInt();
+    // int data = (progressVal/randomColorsList.length).;
+     _sweep=_sweep/randomColorsList.length;
 
 
-    final Paint paint = Paint()
-      ..color = randomColorsList[progressVal - 50 > 10 ? 1 : 0]
+      // ..color = randomColorsList[progressVal<20?0:(progressVal > 20.0 && progressVal < 40.0)?1:(progressVal > 40.0 && progressVal < 70.0)?2:(progressVal > 70.0 && progressVal <= 100.0)?3:4]
       // colored
       //     ? ((progressVal > 0.0 && progressVal < 20.0)
       //         ? Colors.red
@@ -194,20 +196,30 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
       //                         ? Colors.blueAccent
       //                         : Colors.lightBlueAccent)
       //     : valueColor
+
+    // if (backgroundColor != null) {
+    //   final Paint backgroundPaint = Paint()
+    //     ..color = backgroundColor
+    //     ..strokeWidth = strokeWidth
+    //     ..style = PaintingStyle.stroke;
+    //   canvas.drawArc(Offset.zero & size, 20, 45, false, backgroundPaint);
+    // }
+
+    final double divides = 6.56/randomColorsList.length;
+    for(int i=1;i<=randomColorsList.length;i++){
+      final Paint paint = Paint()
+      ..strokeCap = StrokeCap.round
+      ..color=randomColorsList[i-1]
       ..strokeWidth = strokeWidth
       ..style = PaintingStyle.stroke;
-    if (backgroundColor != null) {
-      final Paint backgroundPaint = Paint()
-        ..color = backgroundColor
-        ..strokeWidth = strokeWidth
-        ..style = PaintingStyle.stroke;
-      canvas.drawArc(Offset.zero & size, 0, _sweep, false, paint);
+
+      // if(progressVal<100)
+      print('Progress Value with $i -- $progressVal');
+      print('---------------------------------------');
+      print('Start angle sweep ${(i-1)*divides} -- ${index == i ? progressVal.abs() : progressVal - i*divides}');
+
+      canvas.drawArc(Offset.zero & size,(i-1)*divides ,index == i ? progressVal.abs() : progressVal - i*divides, false, paint);
     }
-
-    if (value == null) // Indeterminate
-      paint.strokeCap = StrokeCap.round;
-
-    canvas.drawArc(Offset.zero & size, arcStart, arcSweep, false, paint);
   }
 
   @override
