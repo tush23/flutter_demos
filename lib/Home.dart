@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demos/bottom_sheet/bottom_sheet_by_shivam.dart';
 import 'package:flutter_demos/customs/customs.dart';
 import 'package:flutter_demos/google_progress/main_worker.dart';
+import 'package:flutter_demos/neumo/NeumoPage.dart';
+import 'package:flutter_demos/paintss/paintProgress.dart';
 import 'date_extension/date_extension_by_shivam.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,6 +27,14 @@ class _HomePageState extends State<HomePage> {
               color: Colors.blue,
               onPressed: () => goto(context, MainWorker()),
               child: Text('Google Progress Indicator')),
+          FlatButton(
+              color: Colors.blue,
+              onPressed: () => goto(context, MyPainter()),
+              child: Text('My Painter')),
+          FlatButton(
+              color: Colors.blue,
+              onPressed: () => goto(context, NeumoPage()),
+              child: Text('My Neumo Page')),
           Text(
               'Extension method->${DateTime.parse('1990-06-20 08:03').beautify()}'),
           FlatButton(
@@ -33,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                 showSheet(
                     ['ram', 'shyam', 'sita', 'gita'], "Bottom Sheet", context);
               },
-              child: Text('Show sheet'))
+              child: Text('Show sheet')),
         ],
       ),
     );
