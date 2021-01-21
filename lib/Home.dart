@@ -19,32 +19,44 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FlatButton(
-              color: Colors.blue,
-              onPressed: () => goto(context, MainWorker()),
-              child: Text('Google Progress Indicator')),
-          FlatButton(
-              color: Colors.blue,
-              onPressed: () => goto(context, MyPainter()),
-              child: Text('My Painter')),
-          FlatButton(
-              color: Colors.blue,
-              onPressed: () => goto(context, NeumoPage()),
-              child: Text('My Neumo Page')),
-          Text(
-              'Extension method->${DateTime.parse('1990-06-20 08:03').beautify()}'),
-          FlatButton(
-              color: Colors.blue,
-              onPressed: () {
-                showSheet(
-                    ['ram', 'shyam', 'sita', 'gita'], "Bottom Sheet", context);
-              },
-              child: Text('Show sheet')),
-        ],
+      body: Center(
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisSize: MainAxisSize.max,
+          children: [
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () => goto(context, MainWorker()),
+                child: Text('Google Progress Indicator')),
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () => goto(context, MyPainter()),
+                child: Text('My Painter')),
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () => goto(context, NeumoPage()),
+                child: Text('My Neumo Page')),
+            Text(
+                'Extension method->${DateTime.parse('1990-06-20 08:03').beautify()}'),
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () {
+                  showSheet(['ram', 'shyam', 'sita', 'gita'], "Bottom Sheet",
+                      context);
+                },
+                child: Text('Show sheet')),
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () => showAboutDialog(
+                      context: context,
+                      applicationIcon: Icon(Icons.ac_unit),
+                      applicationName: 'Demo App',
+                      applicationVersion: '1.0.0',
+                    ),
+                child: Text('AboutDialog')),
+          ],
+        ),
       ),
     );
   }
