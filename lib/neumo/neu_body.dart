@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demos/customs/AppBarWithBack.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
+// ignore: must_be_immutable
 class NeumoBody extends StatelessWidget {
   int _index = 0;
   var _body = [
