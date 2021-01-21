@@ -9,7 +9,7 @@ class NeumoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NeumorphicApp(
-      home:NeumoBody() 
+      home:NeumoBody()
     );
   }
 }

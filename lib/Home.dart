@@ -4,6 +4,7 @@ import 'package:flutter_demos/customs/customs.dart';
 import 'package:flutter_demos/google_progress/main_worker.dart';
 import 'package:flutter_demos/neumo/NeumoPage.dart';
 import 'package:flutter_demos/paintss/paintProgress.dart';
+import 'package:flutter_demos/popUp_menu/pop_menu.dart';
 import 'date_extension/date_extension_by_shivam.dart';
 
 class HomePage extends StatefulWidget {
@@ -55,9 +56,40 @@ class _HomePageState extends State<HomePage> {
                       applicationVersion: '1.0.0',
                     ),
                 child: Text('AboutDialog')),
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () => goto(context, PopUpMenu()),
+                child: Text('_showPopupMenu')),
+            Container(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: TextFormField(
+                  autocorrect: true,
+                  decoration: InputDecoration(
+                    labelText: 'Search',
+                    // icon: Icon(Icons.search),
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                        ),
+                        borderRadius: BorderRadius.circular(30)),
+                  ),
+                ))
           ],
         ),
       ),
+    );
+  }
+
+  void _showPopupMenu() async {
+    await showMenu(
+      context: context,
+      position: RelativeRect.fromLTRB(100, 100, 100, 100),
+      items: [
+        PopupMenuItem<String>(child: const Text('Doge'), value: 'Doge'),
+        PopupMenuItem<String>(child: const Text('Lion'), value: 'Lion'),
+      ],
+      elevation: 8.0,
     );
   }
 }
