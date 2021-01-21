@@ -27,7 +27,7 @@ dependencies:
   flutter_neumorphic: ^3.0.3
   get: ^3.24.0
   intl: ^0.16.1
-  neumorphic: ^0.4.0
+  # neumorphic: ^0.4.0
 
 dev_dependencies:
   flutter_test:
