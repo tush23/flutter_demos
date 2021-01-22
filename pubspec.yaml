@@ -26,6 +26,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_neumorphic: ^3.0.3
   get: ^3.24.0
+  fab_menu_items: ^1.0.0
   intl: ^0.16.1
   # neumorphic: ^0.4.0
 

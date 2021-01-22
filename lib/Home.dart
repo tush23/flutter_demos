@@ -5,6 +5,7 @@ import 'package:flutter_demos/google_progress/main_worker.dart';
 import 'package:flutter_demos/neumo/NeumoPage.dart';
 import 'package:flutter_demos/paintss/paintProgress.dart';
 import 'package:flutter_demos/popUp_menu/pop_menu.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'date_extension/date_extension_by_shivam.dart';
 
 class HomePage extends StatefulWidget {
@@ -58,21 +59,22 @@ class _HomePageState extends State<HomePage> {
                 child: Text('AboutDialog')),
             FlatButton(
                 color: Colors.blue,
-                onPressed: () => goto(context, PopUpMenu()),
+                onPressed: () => goto(context, Mainapp()),
                 child: Text('_showPopupMenu')),
             Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                // style: NeumorphicStyle(
+                //     color: Colors.white,
+                //     boxShape: NeumorphicBoxShape.roundRect(
+                //         BorderRadius.circular(30))),
                 child: TextFormField(
                   autocorrect: true,
                   decoration: InputDecoration(
                     labelText: 'Search',
                     // icon: Icon(Icons.search),
                     prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.grey,
-                        ),
-                        borderRadius: BorderRadius.circular(30)),
+                    border: InputBorder.none,
                   ),
                 ))
           ],
