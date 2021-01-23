@@ -84,13 +84,14 @@ class _HomePageState extends State<HomePage> {
   }
 
   // ignore: unused_element
+  // ignore: avoid_void_async
   void _showPopupMenu() async {
     await showMenu(
       context: context,
-      position: RelativeRect.fromLTRB(100, 100, 100, 100),
+      position: const RelativeRect.fromLTRB(100, 100, 100, 100),
       items: [
-        PopupMenuItem<String>(child: const Text('Doge'), value: 'Doge'),
-        PopupMenuItem<String>(child: const Text('Lion'), value: 'Lion'),
+        const PopupMenuItem<String>(child: const Text('Doge'), value: 'Doge'),
+        const PopupMenuItem<String>(child: const Text('Lion'), value: 'Lion'),
       ],
       elevation: 8.0,
     );
