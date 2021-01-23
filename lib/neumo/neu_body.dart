@@ -21,13 +21,13 @@ class NeumoBody extends StatelessWidget {
           selectedItemColor: Colors.red,
           unselectedItemColor: Colors.grey,
           items: [
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
                   color: Colors.black,
                 ),
                 label: 'Home'),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
                 icon: Icon(
                   Icons.account_balance_wallet,
                   color: Colors.black,
