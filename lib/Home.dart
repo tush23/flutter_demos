@@ -9,7 +9,7 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'date_extension/date_extension_by_shivam.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+  const HomePage({Key key}) : super(key: key);
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
       body: Center(
         child: Column(

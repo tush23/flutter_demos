@@ -25,11 +25,11 @@ class _MainWorkerState extends State<MainWorker> {
       appBar: AppBar(
         title: const Text('MainWorker'),
       ),
-      body: Center(
-        child: Container(
+      body: const Center(
+        child:  SizedBox(
           width: 100,
           height: 100,
-          child: const CustomCircularProgressIndicator(strokeWidth: 10,colored: false,),
+          child:  CustomCircularProgressIndicator(strokeWidth: 10,colored: false,),
         ),
       ),
     );
