@@ -4,12 +4,12 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 // ignore: must_be_immutable
 class NeumoBody extends StatelessWidget {
-  int _index = 0;
-  var _body = [
-    Text('Home'),
-    Text('Orders'),
-    Text('Wallets'),
-    Text('Accounts'),
+  final int _index = 0;
+  final _body = [
+    const Text('Home'),
+    const Text('Orders'),
+    const Text('Wallets'),
+    const Text('Accounts'),
   ];
   @override
   Widget build(BuildContext context) {
