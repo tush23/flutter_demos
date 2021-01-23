@@ -5,7 +5,6 @@ class MyPainter extends StatefulWidget {
   @override
   _MyPainterState createState() => _MyPainterState();
 }
-
 class _MyPainterState extends State<MyPainter> with SingleTickerProviderStateMixin{
 
   AnimationController _controller ;
