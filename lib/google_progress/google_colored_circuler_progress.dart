@@ -160,7 +160,6 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
     Colors.grey,
     Colors.orange
   ];
-  static const int _pathCount = _kIndeterminateCircularDuration ~/ 1333;
 
   @override
   void paint(Canvas canvas, Size size) {
