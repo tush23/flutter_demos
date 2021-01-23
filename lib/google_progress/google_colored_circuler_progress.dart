@@ -157,8 +157,8 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
    static double _sweep = _twoPi - _epsilon;
   static const double _startAngle = -math.pi / 2.0;
 
-  static const Color randomColors = Colors.black;
-  var _random = Random();
+  // static const Color randomColors = Colors.black;
+  // var _random = Random();
   static const List<Color> randomColorsList = [
     Colors.transparent,
     Colors.pink,
