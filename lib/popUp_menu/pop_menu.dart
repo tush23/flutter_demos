@@ -7,7 +7,6 @@ class PopUpMenu extends StatefulWidget {
 }
 
 class _PopUpMenuState extends State<PopUpMenu> {
-  final GlobalKey _menuKey = new GlobalKey();
   bool isClicked = false;
 
   @override
