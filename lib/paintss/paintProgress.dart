@@ -22,16 +22,16 @@ class _MyPainterState extends State<MyPainter> with SingleTickerProviderStateMix
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Progress Bar'),
+        title: const Text('Progress Bar'),
       ),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: 100,
           height: 100,
           child: AnimatedBuilder(
             animation: _controller,
             builder: (_,c) {
-              print("${_controller.value}");
+            debugPrint("${_controller.value}");
               return CustomPaint(
                 painter: ShapePainter(_controller.value*6.56),
                 child: Container(),
