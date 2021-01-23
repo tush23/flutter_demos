@@ -33,13 +33,13 @@ class NeumoBody extends StatelessWidget {
                   color: Colors.black,
                 ),
                 label: "Orders"),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
                 icon: Icon(
                   Icons.shopping_bag,
                   color: Colors.black,
                 ),
                 label: "Wallet"),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
                 icon: Icon(
                   Icons.person_outline,
                   color: Colors.black,
