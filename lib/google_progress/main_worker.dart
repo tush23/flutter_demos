@@ -23,13 +23,13 @@ class _MainWorkerState extends State<MainWorker> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MainWorker'),
+        title: const Text('MainWorker'),
       ),
       body: Center(
         child: Container(
           width: 100,
           height: 100,
-          child: CustomCircularProgressIndicator(strokeWidth: 10,colored: false,),
+          child: const CustomCircularProgressIndicator(strokeWidth: 10,colored: false,),
         ),
       ),
     );

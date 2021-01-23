@@ -24,7 +24,7 @@ class ShapePainter extends CustomPainter {
     //   radius: 50,
     // ));
     for(int i = 1;i <= randomColorsList.length;i++){
-      var paint = Paint()
+      final paint = Paint()
         ..color = randomColorsList[i]
         ..strokeWidth = 10
         ..style = PaintingStyle.stroke

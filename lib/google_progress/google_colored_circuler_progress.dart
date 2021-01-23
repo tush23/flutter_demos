@@ -167,7 +167,7 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
     progressVal = headValue * randomColorsList.length.toInt();
     // print('ProgressCOUNTUUUUU    $progressVal');
 
-    int index = progressVal.toInt();
+    final int index = progressVal.toInt();
     // int data = (progressVal/randomColorsList.length).;
      _sweep=_sweep/randomColorsList.length;
 
@@ -204,9 +204,9 @@ class _CustomCircularProgressIndicatorPainter extends CustomPainter {
       ..style = PaintingStyle.stroke;
 
       // if(progressVal<100)
-      print('Progress Value with $i -- $progressVal');
-      print('---------------------------------------');
-      print('Start angle sweep ${(i-1)*divides} -- ${index == i ? progressVal.abs() : progressVal - i*divides}');
+      // print('Progress Value with $i -- $progressVal');
+      // print('---------------------------------------');
+      // print('Start angle sweep ${(i-1)*divides} -- ${index == i ? progressVal.abs() : progressVal - i*divides}');
 
       canvas.drawArc(Offset.zero & size,(i-1)*divides ,index == i ? progressVal.abs() : progressVal - i*divides, false, paint);
     }
