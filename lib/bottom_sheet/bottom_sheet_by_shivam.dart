@@ -24,7 +24,7 @@ Future<Data> showSheet<Data>(List<Data> data,String title,BuildContext context) 
       },
     );
   }
-  Data d = await showModalBottomSheet<Data>(
+  final Data d = await showModalBottomSheet<Data>(
     context: context,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     builder: (_) {
@@ -55,7 +55,7 @@ Future<Data> showSheet<Data>(List<Data> data,String title,BuildContext context) 
                 ),
               ],
             ),
-            Divider(),
+            const Divider(),
             Expanded(
               child: ListView.builder(
                 shrinkWrap: true,
