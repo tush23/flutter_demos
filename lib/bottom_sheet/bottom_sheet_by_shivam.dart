@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 Future<Data> showSheet<Data>(List<Data> data, title, context) async {
   // in any case if the context is null
   if (context == null) {
-    print("Context is null");
+    debugPrint("Context is null");
     return null;
   }
-  List<String> innerData = [];
-  title = "Select $title";
+  final List<String> innerData = [];
+  // ignore: parameter_assignments
+  title = 'Select $title';
   // if (Data == Relative) {
   //   data.forEach(
   //     (e) {
