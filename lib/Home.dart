@@ -56,11 +56,11 @@ class _HomePageState extends State<HomePage> {
                       applicationName: 'Demo App',
                       applicationVersion: '1.0.0',
                     ),
-                child: Text('AboutDialog')),
+                child: const Text('AboutDialog')),
             FlatButton(
                 color: Colors.blue,
                 onPressed: () => goto(context, Mainapp()),
-                child: Text('_showPopupMenu')),
+                child: const Text('_showPopupMenu')),
             Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 margin: EdgeInsets.symmetric(horizontal: 10),
