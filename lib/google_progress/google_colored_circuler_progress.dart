@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 const double _kMinCustomCircularProgressIndicatorSize = 36.0;
-const int _kIndeterminateLinearDuration = 1800;
 const int _kIndeterminateCircularDuration = 1333 * 2222;
 double progressVal = 0.0;
 
