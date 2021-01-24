@@ -84,6 +84,7 @@ class _HomePageState extends State<HomePage> {
 
   // ignore: unused_element
   // ignore: avoid_void_async
+  // ignore: unused_element
   void _showPopupMenu() async {
     await showMenu(
       context: context,
