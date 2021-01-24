@@ -30,15 +30,15 @@ class _HomePageState extends State<HomePage> {
             FlatButton(
                 color: Colors.blue,
                 onPressed: () => goto(context, MainWorker()),
-                child: Text('Google Progress Indicator')),
+                child: const Text('Google Progress Indicator')),
             FlatButton(
                 color: Colors.blue,
                 onPressed: () => goto(context, MyPainter()),
-                child: Text('My Painter')),
+                child: const Text('My Painter')),
             FlatButton(
                 color: Colors.blue,
                 onPressed: () => goto(context, NeumoPage()),
-                child: Text('My Neumo Page')),
+                child: const Text('My Neumo Page')),
             Text(
                 'Extension method->${DateTime.parse('1990-06-20 08:03').beautify()}'),
             FlatButton(
@@ -47,12 +47,12 @@ class _HomePageState extends State<HomePage> {
                   showSheet(['ram', 'shyam', 'sita', 'gita'], "Bottom Sheet",
                       context);
                 },
-                child: Text('Show sheet')),
+                child: const Text('Show sheet')),
             FlatButton(
                 color: Colors.blue,
                 onPressed: () => showAboutDialog(
                       context: context,
-                      applicationIcon: Icon(Icons.ac_unit),
+                      applicationIcon: const Icon(Icons.ac_unit),
                       applicationName: 'Demo App',
                       applicationVersion: '1.0.0',
                     ),
@@ -62,15 +62,14 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () => goto(context, Mainapp()),
                 child: const Text('_showPopupMenu')),
             Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                margin: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
                 // style: NeumorphicStyle(
                 //     color: Colors.white,
                 //     boxShape: NeumorphicBoxShape.roundRect(
                 //         BorderRadius.circular(30))),
                 child: TextFormField(
-                  autocorrect: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Search',
                     // icon: Icon(Icons.search),
                     prefixIcon: Icon(Icons.search),
