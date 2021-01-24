@@ -30,29 +30,30 @@ class _PopUpMenuState extends State<PopUpMenu> {
     //       dynamic state = _menuKey.currentState;
     //       state.showButtonMenu();
     //     });
-    return new Scaffold(
-        body: new Center(
+    return Scaffold(
+        body: const Center(
           child: Text('ss'),
         ),
         floatingActionButton: FloatingActionButton(
-          child: isClicked
-              ? Container(
-                  color: Colors.red,
-                  child: Column(
-                    children: [
-                      Text('Data'),
-                      Text('Data'),
-                      Text('Data'),
-                      Text('Data')
-                    ],
-                  ),
-                )
-              : null,
           onPressed: () {
             setState(() {
               isClicked = !isClicked;
             });
           },
+          child: isClicked
+              ? Container(
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      const Text('Data'),
+                    
+                      const Text('Data'),
+                      const Text('Data'),
+                      const Text('Data')
+                    ],
+                  ),
+                )
+              : null,
         ));
   }
 }
