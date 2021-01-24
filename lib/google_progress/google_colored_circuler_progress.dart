@@ -319,12 +319,15 @@ class _CustomCircularProgressIndicatorState
   @override
   void didUpdateWidget(CustomCircularProgressIndicator oldWidget) {
     super.didUpdateWidget(oldWidget);
+    // ignore: avoid_print
     print('-----didUpdateWidget-----');
     if (widget.value == null && !_controller.isAnimating) {
+      // ignore: avoid_print
       print('-----didUpdateWidget-----');
       _controller.repeat();
-    } else if (widget.value != null && _controller.isAnimating)
+    } else if (widget.value != null && _controller.isAnimating) {
       _controller.stop();
+    }
   }
 
   @override
