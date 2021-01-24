@@ -371,6 +371,7 @@ class _CustomCircularProgressIndicatorState
   }
 
   Widget _buildAnimation() {
+    // ignore: avoid_print
     print('Animation STATUS--${_controller.status.index}');
     return AnimatedBuilder(
       animation: _controller,
