@@ -7,9 +7,8 @@ class NeumoBody extends StatelessWidget {
   final _body = [
     const Text('Home'),
     const Text('Orders'),
-    
     const Text('Wallets'),
-
+    
     const Text('Accounts'),
   ];
   @override
