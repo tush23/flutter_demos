@@ -13,6 +13,8 @@ class NeumoBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      
       // appBar: appBarWithBack(title: 'nemo Page'),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _index,
