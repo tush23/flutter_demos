@@ -3,11 +3,13 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 // ignore: must_be_immutable
 class NeumoBody extends StatelessWidget {
-  final int _index = 0;
+  final int _index = 3;
   final _body = [
     const Text('Home'),
     const Text('Orders'),
+
     const Text('Wallets'),
+
     const Text('Accounts'),
   ];
   @override
