@@ -46,7 +46,6 @@ class _PopUpMenuState extends State<PopUpMenu> {
                   child: Column(
                     children: [
                       const Text('Data'),
-                    
                       const Text('Data'),
                       const Text('Data'),
                       const Text('Data')
@@ -76,138 +75,44 @@ class _MainappState extends State<Mainapp> {
           ),
         ),
         Fabmenuitems(
-          height: 310,
-          weith: 150,
+          // height: 310,
+          // weith: 150,
           animatedIcons: AnimatedIcons.menu_close,
           fabcolor: Colors.black,
           containercolor: Colors.white,
-          childrens: <Widget>[
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 10,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-            Container(
-              padding: EdgeInsets.only(left: 10,right: 10,top: 2,bottom: 2),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.bubble_chart,size: 24,color: Colors.indigo,),
-                  SizedBox(width: 10,),
-                  Expanded(child: Text("Dummy two",style: TextStyle(
-                      color: Colors.black54,fontSize: 14,fontWeight: FontWeight.w500
-                  ),))
-                ],
-              ),
-            ),
-            Divider(),
-
-
-
-
-          ],
+          childrens: List.generate(
+              4,
+              (index) => Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(
+                            left: 10, right: 10, top: 10, bottom: 2),
+                        alignment: Alignment.centerLeft,
+                        child: Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.bubble_chart,
+                              size: 24,
+                              color: Colors.indigo,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                                child: Text(
+                              "Dummy two",
+                              style: TextStyle(
+                                  color: Colors.black54,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500),
+                            ))
+                          ],
+                        ),
+                      ),
+                      Divider(),
+                    ],
+                  )),
         )
-
       ],
     );
   }
