@@ -1,7 +1,8 @@
 import 'dart:math';
-import 'dart:ui';
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_demos/ripple/custop_paint.dart';
 
 class Palette {
   static const Color darkBlue = Color(0xff092E34);
@@ -21,6 +22,14 @@ class BackgroundPainter extends CustomPainter {
           ..color = Palette.darkBlue
           ..style = PaintingStyle.fill,
         orangePaint = Paint()
+          ..shader = ui.Gradient.linear(
+            Offset(100, 100),
+            Offset(100, 600),
+            [
+              kEndColor.withOpacity(0.3),
+              Colors.white.withOpacity(0.1),
+            ],
+          )
           ..color = Palette.orange
           ..style = PaintingStyle.fill,
         linePaint = Paint()
@@ -36,8 +45,8 @@ class BackgroundPainter extends CustomPainter {
           parent: animation,
           curve: const Interval(
             0,
-            0.7,
-            curve: Interval(0, 0.8, curve: SpringCurve()),
+            0.8,
+            curve: Interval(0.3, 0.5, curve: SpringCurve()),
           ),
           reverseCurve: Curves.linear,
         ),
@@ -163,17 +172,17 @@ class BackgroundPainter extends CustomPainter {
       path.lineTo(0, 0);
       path.lineTo(
         0,
-        lerpDouble(0, size.height / 3, orangeAnim.value),
+        ui.lerpDouble(0, size.height / 3, orangeAnim.value),
       );
 
       _addPointsToPath(path, [
         Point(
           size.width / 10,
-          lerpDouble(0, size.height / 1.3, liquidAnim.value),
+          ui.lerpDouble(0, size.height / 1.3, liquidAnim.value),
         ),
         Point(
           size.width * 4,
-          lerpDouble(0, size.height, liquidAnim.value),
+          ui.lerpDouble(0, size.height, liquidAnim.value),
         ),
         Point(
           size.width * 3 / 2,
@@ -209,6 +218,6 @@ class SpringCurve extends Curve {
 
   @override
   double transformInternal(double t) {
-    return (-(pow(e, -t / a) * cos(t * w)) + 1).toDouble();
+    return (-2 * (pow(e, -t / a) * cos(t * w)) + 1).toDouble();
   }
 }
