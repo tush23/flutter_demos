@@ -5,6 +5,8 @@ import 'package:flutter_demos/google_progress/main_worker.dart';
 import 'package:flutter_demos/neumo/NeumoPage.dart';
 import 'package:flutter_demos/paintss/paintProgress.dart';
 import 'package:flutter_demos/popUp_menu/pop_menu.dart';
+import 'package:flutter_demos/porter_anim/porter_anim.dart';
+import 'package:flutter_demos/ripple/ripple_page.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'date_extension/date_extension_by_shivam.dart';
 
@@ -13,6 +15,7 @@ class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
+
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
@@ -60,6 +63,14 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.blue,
                 onPressed: () => goto(context, Mainapp()),
                 child: const Text('_showPopupMenu')),
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () => goto(context, PorterAnim()),
+                child: const Text('Porter anim')),
+            FlatButton(
+                color: Colors.blue,
+                onPressed: () => goto(context, RipplePage()),
+                child: const Text('Ripple anim')),
             Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 margin: const EdgeInsets.symmetric(horizontal: 10),
