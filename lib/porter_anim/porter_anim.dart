@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demos/porter_anim/painters/bg_painter.dart';
+import 'package:flutter_demos/ripple/custop_paint.dart';
 
 class PorterAnim extends StatefulWidget {
   @override
@@ -23,12 +24,29 @@ class _PorterAnimState extends State<PorterAnim>
     _controller.dispose();
     super.dispose();
   }
+ Gradient _gradient=LinearGradient(
+            begin: Alignment.bottomLeft,
+            end: Alignment.centerLeft,
+            // stops: [
+            //   1.8,
+            //   0.7,
+            // ],
+            colors: [
+              kSplashBgEndColor,
+              kSplashBgStartColor,
+            ],
+          );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
       children: [
+        Container(
+          decoration: BoxDecoration(
+            gradient: _gradient
+          ),
+        ),
         Center(
           child: SizedBox.expand(
             child: CustomPaint(

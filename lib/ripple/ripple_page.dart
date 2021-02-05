@@ -25,18 +25,14 @@ class _RipplePageState extends State<RipplePage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() {
         return rect =
-            rect.inflate(1.3 * MediaQuery.of(context).size.longestSide);
+            rect.inflate(-1.3 * MediaQuery.of(context).size.longestSide);
       });
 
       Future.delayed(animationDuration + delay, _gotoNextSreen);
     });
   }
 
-  void _gotoNextSreen() {
-    //  Navigator.of(context).push(FadeRouteBuilder(page: SecondPage())).then((_) => setState(()=> rect = null));
-    // Navigator.push(
-    //     context, MaterialPageRoute(builder: (context) => SecondPage()));
-  }
+  void _gotoNextSreen() {}
 
   @override
   Widget build(BuildContext context) {
