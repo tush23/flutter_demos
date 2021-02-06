@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demos/ripple/custop_paint.dart';
 
 class Palette {
-  static const Color darkBlue = Color(0xff092E34);
+  static const Color darkBlue = Color(0xffFC5666);
   static const Color lightBlue = Color(0xff489FB5);
   static const Color orange = Color(0xffFFA62B);
   static const Color darkOrange = Color(0xffCC7700);
@@ -192,6 +192,7 @@ class BackgroundPainter extends CustomPainter {
       canvas.drawPath(path, orangePaint);
     }
   }
+
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return true;
