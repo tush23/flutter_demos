@@ -14,7 +14,6 @@ Gradient gradient = LinearGradient(
     kSplashBgStartColor,
   ],
 );
-
 class PorterAnim extends StatefulWidget {
   @override
   _PorterAnimState createState() => _PorterAnimState();
