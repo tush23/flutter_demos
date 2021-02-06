@@ -192,7 +192,6 @@ class BackgroundPainter extends CustomPainter {
       canvas.drawPath(path, orangePaint);
     }
   }
-
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return true;
