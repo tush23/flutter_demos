@@ -50,15 +50,15 @@ class BackgroundPainter extends CustomPainter {
           ),
           reverseCurve: Curves.linear,
         ),
-        // greyAnim = CurvedAnimation(
-        //   parent: animation,
-        //   curve: const Interval(
-        //     0,
-        //     0.8,
-        //     curve: Interval(0, 0.9, curve: SpringCurve()),
-        //   ),
-        //   reverseCurve: Curves.easeInCirc,
-        // ),
+        greyAnim = CurvedAnimation(
+          parent: animation,
+          curve: const Interval(
+            0,
+            0.8,
+            curve: Interval(0, 0.9, curve: SpringCurve()),
+          ),
+          reverseCurve: Curves.easeInCirc,
+        ),
         // blueAnim = CurvedAnimation(
         //   parent: animation,
         //   curve: const SpringCurve(),
@@ -68,7 +68,7 @@ class BackgroundPainter extends CustomPainter {
 
   final Animation<double> liquidAnim;
   // final Animation<double> blueAnim;
-  // final Animation<double> greyAnim;
+  final Animation<double> greyAnim;
   final Animation<double> orangeAnim;
 
   final Paint linePaint;
@@ -99,7 +99,7 @@ class BackgroundPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // paintBlue(size, canvas);
 
-    // paintGrey(size, canvas);
+    paintGrey(size, canvas);
 
     paintOrange(size, canvas);
   }
@@ -130,39 +130,39 @@ class BackgroundPainter extends CustomPainter {
   //   canvas.drawPath(path, bluePaint);
   // }
 
-  // void paintGrey(Size size, Canvas canvas) {
-  //   final path = Path();
-  //   path.moveTo(size.width, 300);
-  //   path.lineTo(size.width, 0);
-  //   path.lineTo(0, 0);
-  //   path.lineTo(
-  //     0,
-  //     lerpDouble(
-  //       size.height / 1,
-  //       size.height / 2.5,
-  //       greyAnim.value,
-  //     ),
-  //   );
-  //   _addPointsToPath(
-  //     path,
-  //     [
-  //       Point(
-  //         size.width / 3,
-  //         lerpDouble(size.height / 2, size.height * 3 / 4, liquidAnim.value),
-  //       ),
-  //       Point(
-  //         size.width * 2,
-  //         lerpDouble(size.height / 3, size.height / 1.2, greyAnim.value),
-  //       ),
-  //       Point(
-  //         size.width,
-  //         lerpDouble(size.height / 5, size.height / 4, greyAnim.value),
-  //       ),
-  //     ],
-  //   );
+  void paintGrey(Size size, Canvas canvas) {
+    final path = Path();
+    path.moveTo(00, 00);
+    path.lineTo(00, 00);
+    path.lineTo(0, 0);
+    path.lineTo(
+      0,
+      ui.lerpDouble(
+        size.height * 2,
+        size.height * 2,
+        greyAnim.value,
+      ),
+    );
+    _addPointsToPath(
+      path,
+      [
+        Point(
+          200,
+          ui.lerpDouble(size.height * 1.3, size.height * 2, liquidAnim.value),
+        ),
+        Point(
+          200,
+          ui.lerpDouble(size.height * 2, size.height / 1.2, greyAnim.value),
+        ),
+        Point(
+          0,
+          ui.lerpDouble(size.height / 1, size.height / 1.15, greyAnim.value),
+        ),
+      ],
+    );
 
-  //   canvas.drawPath(path, greyPaint);
-  // }
+    canvas.drawPath(path, greyPaint);
+  }
 
   void paintOrange(Size size, Canvas canvas) {
     if (orangeAnim.value > 0) {
