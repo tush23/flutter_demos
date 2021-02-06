@@ -5,10 +5,7 @@ import 'package:flutter_demos/ripple/custop_paint.dart';
 Gradient gradient = LinearGradient(
   begin: Alignment.bottomLeft,
   end: Alignment.centerLeft,
-  // stops: [
-  //   1.8,
-  //   0.7,
-  // ],
+
   colors: [
     kSplashBgEndColor,
     kSplashBgStartColor,
